@@ -13,7 +13,7 @@ BROWSER="firefox"
  # The folder or file you want to watch:
 LOCATION="./demo"
 # The server type you want to use (use the ones provided or create your own):
-SERVER_TYPE="node" 
+SERVER_TYPE="python" 
 # The folder you want to serve with the server
 DIST="demo"
 # The build command you want to use (ex: npm run dev) or leave empty if you just want to refresh the page:
@@ -43,7 +43,7 @@ WINDOW=$(xdotool search --name ${BROWSER} getactivewindow)
 while inotifywait -qre close_write --format "$FILENAME" ${LOCATION}
 do
     ${BUILD}
-    xdotool windowfocus $WINDOW
+    xdotool windowraise $WINDOW
     xdotool key ${KEY}
 done
 
