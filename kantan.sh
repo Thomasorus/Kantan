@@ -1,6 +1,6 @@
 #!/bin/sh
 
-#K antan 簡単 (simple, easy) - A set of bash scripts to launch a web server, watch files and launch build commands.
+# Kantan 簡単 (simple, easy) - A set of bash scripts to launch a web server, watch files and launch build commands.
 #
 # Please take the time to configure the script
 #
