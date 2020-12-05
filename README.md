@@ -6,12 +6,13 @@ The goal is to be able to install and configure a web development environment in
 
 ## How to install
 
-Kantan works on linux by using the inotify API. To use it, you need to install`inotify-tools` with the package manager of your choice.
+Kantan works on linux by using the inotify API. To use it, you need to install`inotify-tools` and `xdotool` with the package manager of your choice.
 
 On ubuntu:
 
 ```
 sudo apt install inotify-tools
+sudo apt install xdotool 
 ```
 
 Download the files manually or git clone in your project:
@@ -20,21 +21,10 @@ Download the files manually or git clone in your project:
 git clone git@github.com:Thomasorus/Kantan.git .
 ```
 
-Allow the scripts to be executed:
+Allow the script to be executed:
 ```
-chmod +x ./kantan.sh ./kantan/phpserver.sh ./kantan/nodeserver.sh ./kantan/pythonserver.sh
+chmod +x ./kantan.sh
 ```
-
-## Configure Kantan
-
-Open kantan.sh to configure it to your needs (default values are provided). You can customize these settings:
-
-- **KEY** : The key combination to refresh your browser
-- **BROWSER** : The browser you use
-- **AUTOSWITCH** : If you want an automatic alt-tab to the browser for the refresh
-- **LOCATION** : The folder or file you want to watch
-- **SERVER** : The server type you want to use (use the ones provided or create your own!)
-- **BUILD** : The build command you want to use (ex: npm run build)
 
 ## Choose your web server
 
@@ -44,14 +34,24 @@ Available web servers:
 
 - Node JS
 - PHP
-- Python (WIP)
+- Python
 
 By default they all serve the port 8000.
 
-### Configure your server
+## Configure Kantan
 
-- Open `kantan.sh` and on line 7 choose between `php`, `node` or `python`.
-- In the `/kantan` folder, open the server `.sh` file of your choice and  follow instructions.
+Open kantan.sh to configure it to your needs (default values are provided). You can customize these settings:
+
+- **KEY** : The key combination to refresh your browser
+- **BROWSER** : The browser you use (currently only supports firefox)
+- **LOCATION** : The folder or file you want to watch
+- **SERVER_TYPE** : The server type you want to use (use the ones provided or create your own!)
+- **DIST** : # The folder you want to serve with the server
+- **BUILD** : The build command you want to use (ex: npm run build)
+
+## How to use
+
+`./kantan.sh`
 
 ## License
 
