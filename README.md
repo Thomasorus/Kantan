@@ -1,12 +1,12 @@
 # Kantan 簡単
 
-Kantan 簡単 (simple, easy) - A set of bash scripts to launch a web server, watch files and launch build commands.
+Kantan 簡単 (simple, easy) - A bash script to launch a web server, watch files and launch build commands.
 
-The goal is to be able to install and configure a web development environment in a few minutes.
+The goal is to be able to install and configure a web development environment in a few minutes with minimal dependencies.
 
 ## How to install
 
-Kantan works on linux by using the inotify API. To use it, you need to install`inotify-tools` and `xdotool` with the package manager of your choice.
+Kantan works on Linux. To use it you need to install`inotify-tools` and `xdotool` with the package manager of your choice.
 
 On ubuntu:
 
